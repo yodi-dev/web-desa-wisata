@@ -1,0 +1,44 @@
+CRITICAL - 2024-05-06 06:06:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "template_frontend.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template_frontend.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('template_frontend', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('template_frontend', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-06 07:52:51 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "paket.php"
+[Method: GET, Route: paket]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('paket.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('paket', [], true)
+ 3 APPPATH\Views\layout.php(80): view('paket')
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\desa-wisata\\app\\Views\\layout.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('layout', [], true)
+ 7 APPPATH\Controllers\Paket.php(13): view('layout', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Paket->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paket))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-06 08:25:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "destinasi.php"
+[Method: GET, Route: destinasi]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('destinasi.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('destinasi', [], true)
+ 3 APPPATH\Views\layout.php(80): view('destinasi')
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\desa-wisata\\app\\Views\\layout.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('layout', [], true)
+ 7 APPPATH\Controllers\Destinasi.php(13): view('layout', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Destinasi->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Destinasi))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
