@@ -56,7 +56,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h3><a href="course-details.html">Jelajah Alam</a></h3>
                             </div>
-                            <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
+                            <p>jelajah alam</p>
                             <div class="trainer d-flex justify-content-end align-items-center">
                                 <div class="trainer-rank d-flex align-items-center">
                                     <a href="#">Selengkapnya</a>
