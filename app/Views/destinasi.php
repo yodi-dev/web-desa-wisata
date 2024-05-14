@@ -18,7 +18,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="course-item">
-                        <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
+                        <img src="assets/img/about.jpg" class="img-fluid" alt="...">
                         <div class="course-content">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h3><a href="course-details.html">Jelajah Alam</a></h3>

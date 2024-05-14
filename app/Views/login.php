@@ -28,6 +28,8 @@
 	<link rel="stylesheet" href="../assets/css/azzara.min.css">
 </head>
 
+<!-- <?= $nama ?> -->
+
 <body class="login">
 	<div class="wrapper wrapper-login">
 		<div class="container container-login animated fadeIn">

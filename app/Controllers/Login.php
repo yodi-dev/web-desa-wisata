@@ -2,12 +2,17 @@
 
 namespace App\Controllers;
 
+// $db = \Config\Database::connect();
+
 class Login extends BaseController
 {
     public function index(): string
     {
+        $query = $db->query('SELECT nama_user FROM user LIMIT 1');
+        $row   = $query->getRow();
         $data = [
             'judul' => 'Login',
+            'nama' => $row->nama_user
         ];
         return view('login', $data);
     }
