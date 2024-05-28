@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title> <?= $title ?></title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-    <link rel="icon" href="../assets/img/icon.ico" type="image/x-icon" />
+    <link rel="icon" href="../assets/img/logo.png" type="image/x-icon" />
 
     <!-- Fonts and icons -->
     <script src="../assets/js/plugin/webfont/webfont.min.js"></script>
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="../assets/css/azzara.min.css">
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="../assets/css/demo.css">
+    <!-- <link rel="stylesheet" href="../assets/css/demo.css"> -->
 </head>
 
 <body>
@@ -37,13 +37,13 @@
         <!--
 				Tip 1: You can change the background color of the main header using: data-background-color="blue | purple | light-blue | green | orange | red"
 		-->
-        <div class="main-header" data-background-color="light-blue">
+        <div class="main-header" data-background-color="green">
             <!-- Logo Header -->
             <div class="logo-header">
 
                 <a href="#" class="logo">
-                    <h1 class="title">LOGO</h1>
-                    <!-- <img src="../assets/img/logoazzara.svg" alt="navbar brand" class="navbar-brand"> -->
+                    <h1 class="title mt-2 text-dark">Bumi Arum</h1>
+                    <!-- <img src="../assets/img/logo.png" alt="navbar brand" class="navbar-brand" style="width: 3em;"> -->
                 </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
@@ -75,8 +75,7 @@
                                     <div class="user-box">
                                         <div class="avatar-lg"><img src="../assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
                                         <div class="u-text">
-                                            <h4>Hizrian</h4>
-                                            <p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
+                                            <h4> <?= session('username') ?> </h4>
                                         </div>
                                     </div>
                                 </li>
@@ -84,9 +83,7 @@
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">My Profile</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Account Setting</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Logout</a>
+                                    <a class="dropdown-item" href="<?= base_url() ?>logout">Logout</a>
                                 </li>
                             </ul>
                         </li>
@@ -100,66 +97,36 @@
         <!-- Sidebar -->
         <div class="sidebar">
 
-            <div class="sidebar-background"></div>
             <div class="sidebar-wrapper scrollbar-inner">
                 <div class="sidebar-content">
-                    <div class="user">
-                        <div class="avatar-sm float-left mr-2">
-                            <img src="../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
-                        </div>
-                        <div class="info">
-                            <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
-                                <span>
-                                    Hizrian
-                                    <span class="user-level">Administrator</span>
-                                    <span class="caret"></span>
-                                </span>
-                            </a>
-                            <div class="clearfix"></div>
-
-                            <div class="collapse in" id="collapseExample">
-                                <ul class="nav">
-                                    <li>
-                                        <a href="#profile">
-                                            <span class="link-collapse">My Profile</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#edit">
-                                            <span class="link-collapse">Edit Profile</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#settings">
-                                            <span class="link-collapse">Settings</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                     <ul class="nav">
-                        <li class="nav-item active">
-                            <a href="#">
+                        <li class="nav-item <?php if ($sidebar == "dashboard") echo 'active'; ?>">
+                            <a href="<?= base_url() ?>admin">
                                 <i class="fas fa-home"></i>
                                 <p>Dashboard</p>
                             </a>
                         </li>
-                        <li class="nav-item active">
-                            <a href="#">
-                                <i class="fas fa-home"></i>
+                        <li class="nav-item <?php if ($sidebar == "galeri") echo 'active'; ?>">
+                            <a href="<?= base_url() ?>admin/galeri">
+                                <i class="fas fa-image"></i>
+                                <p>Galeri</p>
+                            </a>
+                        </li>
+                        <li class="nav-item <?php if ($sidebar == "destinasi") echo 'active'; ?>">
+                            <a href="<?= base_url() ?>admin/destinasi">
+                                <i class="fas fa-star"></i>
                                 <p>Destinasi</p>
                             </a>
                         </li>
-                        <li class="nav-item active">
-                            <a href="#">
-                                <i class="fas fa-home"></i>
+                        <li class="nav-item <?php if ($sidebar == "paket") echo 'active'; ?>">
+                            <a href="<?= base_url() ?>admin/paket">
+                                <i class="fas fa-cubes"></i>
                                 <p>Paket</p>
                             </a>
                         </li>
-                        <li class="nav-item active">
-                            <a href="#">
-                                <i class="fas fa-home"></i>
+                        <li class="nav-item <?php if ($sidebar == "profil") echo 'active'; ?>">
+                            <a href="<?= base_url() ?>admin/profil">
+                                <i class="fas fa-address-card"></i>
                                 <p>Profil Desa</p>
                             </a>
                         </li>
@@ -178,17 +145,17 @@
                                 <ul class="nav nav-collapse">
                                     <li>
                                         <a href="components/avatars.html">
-                                            <span class="sub-item">Destinasi</span>
+                                            <span class="sub-item">Item</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="components/buttons.html">
-                                            <span class="sub-item">Paket</span>
+                                            <span class="sub-item">Item</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="components/gridsystem.html">
-                                            <span class="sub-item">Profil</span>
+                                            <span class="sub-item">Item</span>
                                         </a>
                                     </li>
                                 </ul>
