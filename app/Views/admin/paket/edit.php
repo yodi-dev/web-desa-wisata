@@ -5,19 +5,19 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-title">Tambah Galeri</div>
+                            <div class="card-title">Edit Paket</div>
                         </div>
-                        <?= form_open_multipart(base_url('galeri/simpan')); ?>
+                        <?= form_open_multipart(base_url('admin/aksi_edit_paket')); ?>
                         <div class="card-body">
-                            <div class="form-group">
-                                <label for="judul">Judul Gambar</label>
-                                <input type="text" name="judul" class="form-control" id="judul" placeholder="">
+                            <div class=" form-group">
+                                <label for="nama_paket">Nama Paket</label>
+                                <input type="hidden" name="id" value="<?= $paket->id ?>">
+                                <input type="text" name="nama_paket" class="form-control" id="nama_paket" value="<?= $paket->nama_paket ?>">
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlFile1">Gambar</label>
-                                <input type="file" name="gambar" class="form-control-file" id="exampleFormControlFile1">
+                                <label for="harga">Harga</label>
+                                <input type="number" name="harga" class="form-control" id="harga" value="<?= $paket->harga ?>">
                             </div>
-
                         </div>
                         <div class="card-action">
                             <button class="btn btn-success">Submit</button>

@@ -107,13 +107,13 @@
                             </a>
                         </li>
                         <li class="nav-item <?php if ($sidebar == "galeri") echo 'active'; ?>">
-                            <a href="<?= base_url() ?>admin/galeri">
+                            <a href="<?= base_url() ?>galeri">
                                 <i class="fas fa-image"></i>
                                 <p>Galeri</p>
                             </a>
                         </li>
                         <li class="nav-item <?php if ($sidebar == "destinasi") echo 'active'; ?>">
-                            <a href="<?= base_url() ?>admin/destinasi">
+                            <a href="<?= base_url() ?>destinasi">
                                 <i class="fas fa-star"></i>
                                 <p>Destinasi</p>
                             </a>

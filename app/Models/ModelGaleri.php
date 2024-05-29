@@ -49,4 +49,10 @@ class ModelGaleri extends Model
         $query = $this->getWhere(['id' => $id]);
         return $query;
     }
+
+    public function edit_data($id, $data)
+    {
+        $query = $this->db->table($this->table)->where('id', $id)->update($data);
+        return $query;
+    }
 }

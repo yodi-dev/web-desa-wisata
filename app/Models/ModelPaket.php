@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ModelDestinasi extends Model
+class ModelPaket extends Model
 {
-    protected $table            = 'destinasi';
+    protected $table            = 'paket';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
@@ -44,15 +44,30 @@ class ModelDestinasi extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function pilihDestinasi($id)
+    public function getData()
+    {
+        $paket = $this->db->table('paket')->get()->getResult();
+        return $paket;
+    }
+
+    public function pilihPaket($id)
     {
         $query = $this->getWhere(['id' => $id]);
         return $query;
     }
 
-    public function edit_data($id, $data)
+    public function edit_paket($id, $data)
     {
         $query = $this->db->table($this->table)->where('id', $id)->update($data);
+        return $query;
+    }
+
+    public function data_destinasi()
+    {
+        $builder = $this->db->table('detail_paket');
+        $builder->select('destinasi.nama_wisata');
+        $builder->join('destinasi', 'destinasi.id = detail_paket.id_destinasi');
+        $query = $builder->get()->getResult();
         return $query;
     }
 }

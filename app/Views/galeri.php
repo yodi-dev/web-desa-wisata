@@ -27,8 +27,8 @@
                 </div>
               </div>
             </div>
-          <?php } ?>
           </div> <!-- End Galeri Item-->
+        <?php } ?>
       </div>
     </div>
   </section><!-- End  Galeri Section -->

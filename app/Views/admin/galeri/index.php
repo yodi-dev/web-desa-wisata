@@ -5,11 +5,11 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-title">Paket</div>
+                            <div class="card-title">Galeri</div>
                         </div>
                         <div class="card-body">
                             <div class="card-sub">
-                                <a href="<?= base_url('admin/tambah_paket') ?>" class="btn btn-sm btn-dark">+</a>
+                                <a href="<?= base_url('galeri/tambah') ?>" class="btn btn-sm btn-dark">+</a>
                             </div>
                             <?php if (!empty(session()->getFlashdata('berhasil'))) { ?>
                                 <div class="alert alert-success">
@@ -19,20 +19,25 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Nama Paket</th>
-                                        <th scope="col">Harga Paket</th>
-                                        <th scope="col" style="width: 13rem;">Aksi</th>
+                                        <th scope="col">Judul</th>
+                                        <th scope="col">Gambar</th>
+                                        <th scope="col" style="width: 9rem;">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($paket as $value) { ?>
+                                    <?php foreach ($galeri as $value) { ?>
                                         <tr>
-                                            <td><?= $value->nama_paket ?></td>
-                                            <td> <?= $value->harga ?> </td>
+                                            <td><?= $value->judul ?></td>
                                             <td>
-                                                <a href="<?= base_url() ?>detail_paket/<?= $value->id; ?>" class="btn btn-sm btn-dark mr-1">Detail</a>
-                                                <a href="<?= base_url() ?>edit_paket/<?= $value->id; ?>" class="btn btn-sm btn-dark mr-1">Edit</a>
-                                                <a href="<?= base_url() ?>admin/hapus_paket/<?= $value->id; ?>" class="btn btn-sm btn-dark">Hapus</a>
+                                                <?php
+                                                if (!empty($value->gambar)) {
+                                                    echo '<img src="' . base_url("assets/img/upload/$value->gambar") . '" width="100">';
+                                                }
+                                                ?>
+                                            </td>
+                                            <td>
+                                                <a href="<?= base_url() ?>galeri_edit/<?= $value->id; ?>" class="btn btn-sm btn-dark mr-2">Edit</a>
+                                                <a href="<?= base_url() ?>galeri/hapus/<?= $value->id; ?>" class="btn btn-sm btn-dark">Hapus</a>
                                             </td>
                                         </tr>
                                     <?php } ?>
