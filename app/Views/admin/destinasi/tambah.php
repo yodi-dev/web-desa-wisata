@@ -7,7 +7,7 @@
                         <div class="card-header">
                             <div class="card-title">Tambah Destinasi</div>
                         </div>
-                        <?= form_open_multipart(base_url('admin/simpan_destinasi')); ?>
+                        <?= form_open_multipart(base_url('destinasi/simpan')); ?>
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="nama_wisata">Nama Wisata</label>

@@ -7,7 +7,7 @@
                         <div class="card-header">
                             <div class="card-title">Edit Paket</div>
                         </div>
-                        <?= form_open_multipart(base_url('admin/aksi_edit_paket')); ?>
+                        <?= form_open_multipart(base_url('paket/aksi_edit')); ?>
                         <div class="card-body">
                             <div class=" form-group">
                                 <label for="nama_paket">Nama Paket</label>

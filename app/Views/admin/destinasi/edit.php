@@ -7,10 +7,11 @@
                         <div class="card-header">
                             <div class="card-title">Edit Destinasi</div>
                         </div>
-                        <?= form_open_multipart(base_url('admin/aksi_edit_destinasi')); ?>
+                        <?= form_open_multipart(base_url('destinasi/aksi_edit')); ?>
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="nama_wisata">Nama Wisata</label>
+                                <input type="hidden" name="id" value="<?= $destinasi->id ?>">
                                 <input type="text" name="nama_wisata" class="form-control" id="nama_wisata" value="<?= $destinasi->nama_wisata ?>">
                             </div>
                             <div class="form-group">

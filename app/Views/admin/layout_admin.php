@@ -119,7 +119,7 @@
                             </a>
                         </li>
                         <li class="nav-item <?php if ($sidebar == "paket") echo 'active'; ?>">
-                            <a href="<?= base_url() ?>admin/paket">
+                            <a href="<?= base_url() ?>paket">
                                 <i class="fas fa-cubes"></i>
                                 <p>Paket</p>
                             </a>

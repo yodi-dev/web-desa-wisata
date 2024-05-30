@@ -9,7 +9,7 @@
                         </div>
                         <div class="card-body">
                             <div class="card-sub">
-                                <a href="<?= base_url('admin/tambah_destinasi') ?>" class="btn btn-sm btn-dark">+</a>
+                                <a href="<?= base_url('destinasi/tambah') ?>" class="btn btn-sm btn-dark">+</a>
                             </div>
                             <?php if (!empty(session()->getFlashdata('berhasil'))) { ?>
                                 <div class="alert alert-success">
@@ -43,7 +43,7 @@
                                                 ?>
                                             </td>
                                             <td><?= $value->populer ?></td>
-                                            <td><a href="<?= base_url() ?>edit_destinasi/<?= $value->id; ?>" class="btn btn-sm btn-dark mr-2">Edit</a><a href="<?= base_url() ?>admin/hapus_destinasi/<?= $value->id; ?>" class="btn btn-sm btn-dark">Hapus</a></td>
+                                            <td><a href="<?= base_url() ?>destinasi_edit/<?= $value->id; ?>" class="btn btn-sm btn-dark mr-2">Edit</a><a href="<?= base_url() ?>destinasi/hapus/<?= $value->id; ?>" class="btn btn-sm btn-dark">Hapus</a></td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>

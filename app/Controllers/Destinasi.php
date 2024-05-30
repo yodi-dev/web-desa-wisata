@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\ModelDestinasi;
 use CodeIgniter\HTTP\ResponseInterface;
 
 class Destinasi extends BaseController
@@ -65,7 +66,7 @@ class Destinasi extends BaseController
         }
         $this->db->table('destinasi')->insert($data);
 
-        return redirect()->to('admin/destinasi')->with('berhasil', 'Data Berhasil di Simpan');
+        return redirect()->to('destinasi')->with('berhasil', 'Data Berhasil di Simpan');
     }
 
     public function edit($id)
@@ -103,9 +104,11 @@ class Destinasi extends BaseController
             );
         } else {
             $dt = $model->pilihDestinasi($id)->getRow();
-            $gambar = $dt->gambar;
-            $path = '../public/assets/img/upload/';
-            unlink($path . $gambar);
+            if (!empty($dt->gambar)) {
+                $gambar = $dt->gambar;
+                $path = '../public/assets/img/upload/';
+                unlink($path . $gambar);
+            }
             $upload = $this->request->getFile('gambar');
             $upload->move(WRITEPATH . '../public/assets/img/upload/');
             $data = array(
@@ -118,7 +121,7 @@ class Destinasi extends BaseController
             );
         }
         $model->edit_data($id, $data);
-        return redirect()->to('admin/destinasi')->with('berhasil', 'Data Berhasil di Ubah');
+        return redirect()->to('destinasi')->with('berhasil', 'Data Berhasil di Ubah');
     }
 
 
@@ -128,9 +131,11 @@ class Destinasi extends BaseController
         $dt = $model->pilihDestinasi($id)->getRow();
 
         $this->db->table('destinasi')->delete(array('id' => $id));
-        $gambar = $dt->gambar;
-        $path = '../public/assets/img/upload/';
-        unlink($path . $gambar);
-        return redirect()->to('admin/destinasi')->with('berhasil', 'Data Berhasil di Hapus');
+        if (!empty($dt->gambar)) {
+            $gambar = $dt->gambar;
+            $path = '../public/assets/img/upload/';
+            unlink($path . $gambar);
+        }
+        return redirect()->to('destinasi')->with('berhasil', 'Data Berhasil di Hapus');
     }
 }

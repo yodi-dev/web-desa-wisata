@@ -29,12 +29,14 @@ $routes->group('destinasi', static function ($routes) {
 });
 $routes->add('destinasi_edit/(:segment)', 'Destinasi::edit/$1');
 
-$routes->get('/admin/paket', 'Admin::paket');
-$routes->get('/admin/tambah_paket', 'Admin::add_paket');
-$routes->post('/admin/simpan_paket', 'Admin::save_paket');
-$routes->add('/edit_paket/(:segment)', 'Admin::edit_paket/$1');
-$routes->post('/admin/aksi_edit_paket', 'Admin::aksi_edit_paket');
-$routes->get('/admin/hapus_paket/(:segment)', 'Admin::delete_paket/$1');
+$routes->group('paket', static function ($routes) {
+    $routes->get('', 'Paket::index');
+    $routes->get('tambah', 'Paket::add');
+    $routes->post('simpan', 'Paket::save');
+    $routes->post('aksi_edit', 'Paket::aksi_edit');
+    $routes->get('hapus/(:segment)', 'Paket::delete/$1');
+});
+$routes->add('/paket_edit/(:segment)', 'Paket::edit/$1');
 
 $routes->get('/admin/profil', 'Admin::profil');
 $routes->get('/', 'Home::index');
