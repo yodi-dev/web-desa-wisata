@@ -13,46 +13,23 @@
     <div class="container" data-aos="fade-up">
 
       <div class="row" data-aos="zoom-in" data-aos-delay="100">
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-          <div class="course-item">
-            <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
-          </div>
-        </div> <!-- End Galeri Item-->
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-          <div class="course-item">
-            <img src="assets/img/course-2.jpg" class="img-fluid" alt="...">
-          </div>
-        </div> <!-- End Galeri Item-->
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-          <div class="course-item">
-            <img src="assets/img/course-3.jpg" class="img-fluid" alt="...">
-          </div>
-        </div> <!-- End Galeri Item-->
+        <?php foreach ($galeri as $value) { ?>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="course-item">
+              <?php
+              if (!empty($value->gambar)) {
+                echo '<img src="' . base_url("assets/img/upload/$value->gambar") . '"class="img-fluid" alt="...">';
+              }
+              ?>
+              <div class="course-content">
+                <div class="trainer d-flex justify-content-center align-items-center">
+                  <p><?= $value->judul ?></p>
+                </div>
+              </div>
+            </div>
+          </div> <!-- End Galeri Item-->
+        <?php } ?>
       </div>
-      <div class="row mt-4" data-aos="zoom-in" data-aos-delay="100">
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-          <div class="course-item">
-            <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
-          </div>
-        </div> <!-- End Galeri Item-->
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-          <div class="course-item">
-            <img src="assets/img/course-2.jpg" class="img-fluid" alt="...">
-          </div>
-        </div> <!-- End Galeri Item-->
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-          <div class="course-item">
-            <img src="assets/img/course-3.jpg" class="img-fluid" alt="...">
-          </div>
-        </div> <!-- End Galeri Item-->
-      </div>
-
     </div>
   </section><!-- End  Galeri Section -->
 
