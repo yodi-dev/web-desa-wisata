@@ -87,21 +87,20 @@
         <div class="footer-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-md-6 footer-contact">
+                    <div class="col-lg-10 col-md-6 footer-contact">
                         <h3>Desa Wisata Bumi Arum</h3>
-                        <div class="col-lg-6 d-flex justify-content-beetwen">
+                        <div class="col-lg-8 d-flex justify-content-beetwen">
                             <div class="col-lg-6">
                                 <p>
-                                    A108 Adam Street <br>
-                                    New York, NY 535022<br>
-                                    United States <br>
+                                    Jl. Balerante-tunggularum, Dsn. Gondoarum, Kalurahan Wonokerto<br>
+                                    Kec. Turi, Sleman, DIY.<br>
                                     <a href="<?= base_url() ?>auth">Login Admin</a><br>
                                 </p>
                             </div>
                             <div class="col-lg-6">
                                 <p>
-                                    <strong>Phone:</strong> +1 5589 55488 55<br>
-                                    <strong>Email:</strong> info@example.com<br>
+                                    <strong>Telepon :</strong> 082329458885<br>
+                                    <strong>Email :</strong> bhaktimudagondoarum@gmail.com<br>
                                 </p>
                             </div>
                         </div>
@@ -113,7 +112,7 @@
         <div class="container d-md-flex py-2">
             <div class="me-md-auto text-center text-md-start">
                 <div class="copyright">
-                    &copy; Copyright <strong><span>2024</span></strong> - Desa Wisata Bumi Arum
+                    &copy; Copyright <strong><span>2024</span></strong> - Tim Desa Wisata Bumi Arum
                 </div>
             </div>
             <div class="social-links text-center text-md-right pt-3 pt-md-0">

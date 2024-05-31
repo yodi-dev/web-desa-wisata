@@ -30,7 +30,7 @@
                                 <p><?= $value->slug ?></p>
                                 <div class="trainer d-flex justify-content-end align-items-center">
                                     <div class="trainer-rank d-flex align-items-center">
-                                        <a href="#">Selengkapnya</a>
+                                        <a href="<?= base_url('detail_destinasi') ?>/<?= $value->id ?>">Selengkapnya</a>
                                     </div>
                                 </div>
                             </div>

@@ -85,6 +85,28 @@ class Paket extends BaseController
         // var_dump($id);
     }
 
+    public function detail($id)
+    {
+        $model = new ModelPaket();
+        helper('form');
+        $paket = $model->pilihPaket($id)->getRow();
+        $destinasi = $model->data_destinasi($id);
+        $all_destinasi = $model->all_destinasi();
+
+        // var_dump($paket);
+        // var_dump($destinasi);
+        // var_dump($all_destinasi);
+        $data = [
+            'paket' => $paket,
+            'destinasi' => $destinasi,
+            'all_destinasi' => $all_destinasi,
+            'title' => 'Paket - Tambah',
+            'sidebar' => 'paket',
+            'page' => 'admin/paket/detail'
+        ];
+        return view('admin/layout_admin', $data);
+    }
+
     public function delete($id)
     {
         $this->db->table('paket')->delete(array('id' => $id));

@@ -37,11 +37,13 @@ $routes->group('paket', static function ($routes) {
     $routes->get('hapus/(:segment)', 'Paket::delete/$1');
 });
 $routes->add('/paket_edit/(:segment)', 'Paket::edit/$1');
+$routes->add('/paket_detail/(:segment)', 'Paket::detail/$1');
 
 $routes->get('/admin/profil', 'Admin::profil');
 $routes->get('/', 'Home::index');
 $routes->get('/home/galeri', 'Home::galeri');
 $routes->get('/home/destinasi', 'Home::destinasi');
+$routes->get('/detail_destinasi/(:segment)', 'Home::detail_destinasi/$1');
 $routes->get('/home/paket', 'Home::paket');
 $routes->get('/home/potensi', 'Home::potensi');
 $routes->get('/home/profil', 'Home::profil');

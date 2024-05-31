@@ -43,6 +43,18 @@ class Home extends BaseController
         return view('layout', $data);
     }
 
+    public function detail_destinasi($id): string
+    {
+        $destinasi = $this->db->table('destinasi')->where('id', $id)->get()->getResult();
+
+        $data = [
+            'destinasi' => $destinasi,
+            'judul' => 'Destinasi Wisata',
+            'page' => 'detail_destinasi'
+        ];
+        return view('layout', $data);
+    }
+
     public function paket(): string
     {
         $data = [

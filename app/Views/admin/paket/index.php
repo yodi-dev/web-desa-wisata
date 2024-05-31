@@ -30,7 +30,7 @@
                                             <td><?= $value->nama_paket ?></td>
                                             <td> <?= $value->harga ?> </td>
                                             <td>
-                                                <a href="<?= base_url() ?>detail_paket/<?= $value->id; ?>" class="btn btn-sm btn-dark mr-1">Detail</a>
+                                                <a href="<?= base_url() ?>paket_detail/<?= $value->id; ?>" class="btn btn-sm btn-dark mr-1">Detail</a>
                                                 <a href="<?= base_url() ?>paket_edit/<?= $value->id; ?>" class="btn btn-sm btn-dark mr-1">Edit</a>
                                                 <a href="<?= base_url() ?>paket/hapus/<?= $value->id; ?>" class="btn btn-sm btn-dark">Hapus</a>
                                             </td>
