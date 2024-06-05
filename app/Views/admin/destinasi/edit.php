@@ -22,10 +22,7 @@
                                 <label for="deskripsi">Deskripsi</label>
                                 <input type="text" name="deskripsi" class="form-control" id="deskripsi" value="<?= $destinasi->deskripsi ?>">
                             </div>
-                            <div class=" form-group">
-                                <label for="harga">Harga</label>
-                                <input type="number" name="harga" class="form-control" id="harga" value="<?= $destinasi->harga ?>">
-                            </div>
+
                             <div class="form-group">
                                 <label for="exampleFormControlFile1">Gambar</label>
                                 <br>
@@ -50,7 +47,6 @@
                         </div>
                         <div class="card-action">
                             <button class="btn btn-success">Submit</button>
-                            <button class="btn btn-danger">Cancel</button>
                         </div>
                         <?= form_close(); ?>
                     </div>

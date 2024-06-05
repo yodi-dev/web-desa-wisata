@@ -106,6 +106,12 @@
                                 <p>Dashboard</p>
                             </a>
                         </li>
+                        <li class="nav-item <?php if ($sidebar == "pesanan") echo 'active'; ?>">
+                            <a href="<?= base_url() ?>pesanan">
+                                <i class="fas fa-cart-arrow-down"></i>
+                                <p>Pesanan</p>
+                            </a>
+                        </li>
                         <li class="nav-item <?php if ($sidebar == "galeri") echo 'active'; ?>">
                             <a href="<?= base_url() ?>galeri">
                                 <i class="fas fa-image"></i>
@@ -124,42 +130,16 @@
                                 <p>Paket</p>
                             </a>
                         </li>
-                        <li class="nav-item <?php if ($sidebar == "profil") echo 'active'; ?>">
-                            <a href="<?= base_url() ?>admin/profil">
+                        <li class="nav-item <?php if ($sidebar == "potensi") echo 'active'; ?>">
+                            <a href="<?= base_url() ?>admin/potensi">
                                 <i class="fas fa-address-card"></i>
-                                <p>Profil Desa</p>
+                                <p>Potensi Desa</p>
                             </a>
                         </li>
                         <li class="nav-section">
                             <span class="sidebar-mini-icon">
                                 <i class="fa fa-ellipsis-h"></i>
                             </span>
-                        </li>
-                        <li class="nav-item">
-                            <a data-toggle="collapse" href="#base">
-                                <i class="fas fa-layer-group"></i>
-                                <p>Master Data</p>
-                                <span class="caret"></span>
-                            </a>
-                            <div class="collapse" id="base">
-                                <ul class="nav nav-collapse">
-                                    <li>
-                                        <a href="components/avatars.html">
-                                            <span class="sub-item">Item</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="components/buttons.html">
-                                            <span class="sub-item">Item</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="components/gridsystem.html">
-                                            <span class="sub-item">Item</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
                     </ul>
                 </div>

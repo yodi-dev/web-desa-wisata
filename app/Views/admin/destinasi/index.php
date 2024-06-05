@@ -22,7 +22,6 @@
                                         <th scope="col">Nama Wisata</th>
                                         <th scope="col">Ket. Singkat</th>
                                         <th scope="col">Deskripsi</th>
-                                        <th scope="col">Harga</th>
                                         <th scope="col">Gambar</th>
                                         <th scope="col">Populer</th>
                                         <th scope="col" style="width: 9rem;">Aksi</th>
@@ -34,7 +33,6 @@
                                             <td><?= $value->nama_wisata ?></td>
                                             <td><?= $value->slug ?></td>
                                             <td><?= $value->deskripsi ?></td>
-                                            <td><?= $value->harga ?></td>
                                             <td>
                                                 <?php
                                                 if (!empty($value->gambar)) {

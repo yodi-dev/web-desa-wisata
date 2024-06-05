@@ -25,7 +25,7 @@
                             ?>
                             <div class="course-content">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h3><a href="course-details.html"><?= $value->nama_wisata ?></a></h3>
+                                    <h3><a href="<?= base_url('detail_destinasi') ?>/<?= $value->id ?>"><?= $value->nama_wisata ?></a></h3>
                                 </div>
                                 <p><?= $value->slug ?></p>
                                 <div class="trainer d-flex justify-content-end align-items-center">

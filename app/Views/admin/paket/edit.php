@@ -18,6 +18,10 @@
                                 <label for="harga">Harga</label>
                                 <input type="number" name="harga" class="form-control" id="harga" value="<?= $paket->harga ?>">
                             </div>
+                            <div class=" form-group">
+                                <label for="keterangan">Keterangan</label>
+                                <input type="text" name="keterangan" class="form-control" id="keterangan" value="<?= $paket->keterangan ?>">
+                            </div>
                         </div>
                         <div class="card-action">
                             <button class="btn btn-success">Submit</button>

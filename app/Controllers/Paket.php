@@ -47,6 +47,7 @@ class Paket extends BaseController
         $data = array(
             'nama_paket'  => $this->request->getPost('nama_paket'),
             'harga' => $this->request->getPost('harga'),
+            'keterangan' => $this->request->getPost('keterangan'),
         );
         $this->db->table('paket')->insert($data);
 
@@ -63,7 +64,7 @@ class Paket extends BaseController
         // var_dump($paket);
         $data = [
             'paket' => $paket,
-            'title' => 'Paket - Tambah',
+            'title' => 'Paket - Edit',
             'sidebar' => 'paket',
             'page' => 'admin/paket/edit'
         ];
@@ -78,6 +79,7 @@ class Paket extends BaseController
         $data = array(
             'nama_paket'  => $this->request->getPost('nama_paket'),
             'harga' => $this->request->getPost('harga'),
+            'keterangan' => $this->request->getPost('keterangan'),
         );
 
         $model->edit_paket($id, $data);

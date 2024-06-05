@@ -3,7 +3,7 @@
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
         <h1>Desa Wisata<br>Bumi Arum</h1>
         <h2>Terletak di daerah Sleman desa ini wajib masuk daftar liburanmu!</h2>
-        <a href="<?= base_url() ?>paket" class="btn-get-started">Pesan Sekarang</a>
+        <a href="<?= base_url() ?>home/paket" class="btn-get-started">Pesan Sekarang</a>
     </div>
 </section><!-- End Hero -->
 
@@ -109,7 +109,7 @@
     <section id="get" class="get">
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
             <div class="col-lg-12 d-flex justify-content-center align-item-center">
-                <a href="<?= base_url() ?>paket" class="btn-get-started">Pesan Sekarang</a>
+                <a href="<?= base_url() ?>home/paket" class="btn-get-started">Pesan Sekarang</a>
             </div>
         </div>
 

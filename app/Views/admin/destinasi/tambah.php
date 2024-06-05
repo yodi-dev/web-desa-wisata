@@ -22,10 +22,6 @@
                                 <input type="text" name="deskripsi" class="form-control" id="deskripsi" placeholder="">
                             </div>
                             <div class="form-group">
-                                <label for="harga">Harga</label>
-                                <input type="number" name="harga" class="form-control" id="harga" placeholder="">
-                            </div>
-                            <div class="form-group">
                                 <label for="exampleFormControlFile1">Gambar</label>
                                 <input type="file" name="gambar" class="form-control-file" id="exampleFormControlFile1">
                             </div>

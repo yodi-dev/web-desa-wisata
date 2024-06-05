@@ -22,13 +22,13 @@ class Admin extends BaseController
         return view('admin/layout_admin', $data);
     }
 
-    public function profil(): string
+    public function potensi(): string
     {
         $data = [
-            'title' => 'Admin - Profil',
-            'sidebar' => 'profil',
+            'title' => 'Admin - Potensi',
+            'sidebar' => 'potensi',
 
-            'page' => 'admin/profil'
+            'page' => 'admin/potensi'
         ];
         return view('admin/layout_admin', $data);
     }

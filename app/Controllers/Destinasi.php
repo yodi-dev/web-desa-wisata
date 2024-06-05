@@ -49,7 +49,6 @@ class Destinasi extends BaseController
                 'nama_wisata'  => $this->request->getPost('nama_wisata'),
                 'slug' => $this->request->getPost('slug'),
                 'deskripsi' => $this->request->getPost('deskripsi'),
-                'harga' => $this->request->getPost('harga'),
                 'populer' => $this->request->getPost('populer')
             );
         } else {
@@ -59,7 +58,6 @@ class Destinasi extends BaseController
                 'nama_wisata'  => $this->request->getPost('nama_wisata'),
                 'slug' => $this->request->getPost('slug'),
                 'deskripsi' => $this->request->getPost('deskripsi'),
-                'harga' => $this->request->getPost('harga'),
                 'gambar' => $upload->getName(),
                 'populer' => $this->request->getPost('populer')
             );
@@ -99,7 +97,6 @@ class Destinasi extends BaseController
                 'nama_wisata'  => $this->request->getPost('nama_wisata'),
                 'slug' => $this->request->getPost('slug'),
                 'deskripsi' => $this->request->getPost('deskripsi'),
-                'harga' => $this->request->getPost('harga'),
                 'populer' => $this->request->getPost('populer')
             );
         } else {
@@ -115,7 +112,6 @@ class Destinasi extends BaseController
                 'nama_wisata'  => $this->request->getPost('nama_wisata'),
                 'slug' => $this->request->getPost('slug'),
                 'deskripsi' => $this->request->getPost('deskripsi'),
-                'harga' => $this->request->getPost('harga'),
                 'gambar' => $upload->getName(),
                 'populer' => $this->request->getPost('populer')
             );

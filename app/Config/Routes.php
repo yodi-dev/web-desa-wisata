@@ -11,6 +11,14 @@ $routes->get('/logout', 'Auth::logout');
 
 $routes->get('/admin', 'Admin::index');
 
+$routes->group('pesanan', static function ($routes) {
+    $routes->get('', 'Pesanan::index');
+    $routes->get('hapus/(:segment)', 'Pesanan::delete/$1');
+    $routes->post('aksi_edit', 'Pesanan::aksi_edit');
+});
+$routes->add('/pesanan_edit/(:segment)', 'Pesanan::edit/$1');
+
+
 $routes->group('galeri', static function ($routes) {
     $routes->get('', 'Galeri::index');
     $routes->get('tambah', 'Galeri::add');
@@ -36,10 +44,13 @@ $routes->group('paket', static function ($routes) {
     $routes->post('aksi_edit', 'Paket::aksi_edit');
     $routes->get('hapus/(:segment)', 'Paket::delete/$1');
 });
+
 $routes->add('/paket_edit/(:segment)', 'Paket::edit/$1');
 $routes->add('/paket_detail/(:segment)', 'Paket::detail/$1');
 
-$routes->get('/admin/profil', 'Admin::profil');
+$routes->get('/admin/potensi', 'Admin::potensi');
+
+// user routes
 $routes->get('/', 'Home::index');
 $routes->get('/home/galeri', 'Home::galeri');
 $routes->get('/home/destinasi', 'Home::destinasi');
@@ -47,3 +58,6 @@ $routes->get('/detail_destinasi/(:segment)', 'Home::detail_destinasi/$1');
 $routes->get('/home/paket', 'Home::paket');
 $routes->get('/home/potensi', 'Home::potensi');
 $routes->get('/home/profil', 'Home::profil');
+$routes->add('/home/pesan/(:segment)', 'Home::pesan/$1');
+$routes->add('home/pesanan', 'Home::pesanan');
+$routes->add('home/pesan_berhasil', 'Home::pesan_berhasil');

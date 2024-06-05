@@ -75,6 +75,7 @@ class Filters extends BaseFilters
                     'auth/aksi',
                     '/',
                     '/home/*',
+                    '/detail_destinasi/*',
                     'logout'
                 ]
             ],

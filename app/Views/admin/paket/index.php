@@ -21,6 +21,7 @@
                                     <tr>
                                         <th scope="col">Nama Paket</th>
                                         <th scope="col">Harga Paket</th>
+                                        <th scope="col">Keterangan</th>
                                         <th scope="col" style="width: 13rem;">Aksi</th>
                                     </tr>
                                 </thead>
@@ -29,6 +30,7 @@
                                         <tr>
                                             <td><?= $value->nama_paket ?></td>
                                             <td> <?= $value->harga ?> </td>
+                                            <td> <?= $value->keterangan ?> </td>
                                             <td>
                                                 <a href="<?= base_url() ?>paket_detail/<?= $value->id; ?>" class="btn btn-sm btn-dark mr-1">Detail</a>
                                                 <a href="<?= base_url() ?>paket_edit/<?= $value->id; ?>" class="btn btn-sm btn-dark mr-1">Edit</a>
