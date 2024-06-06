@@ -3,7 +3,7 @@
   <div class="breadcrumbs" data-aos="fade-in">
     <div class="container">
       <h2>Tentang Kami</h2>
-      <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+      <p>profil desa wisata Bumi Arum. </p>
     </div>
   </div><!-- End Breadcrumbs -->
 
@@ -16,18 +16,17 @@
           <img src="assets/img/about.jpg" class="img-fluid" alt="">
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-          <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+          <h3>BUMI ARUM.</h3>
           <p class="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+          GONDOARUM merupakan dusun yang  terletak di desa Wonokerto, Kec. Turi, Kab.  Sleman, Yogyakarta. Dusun Gondoarum juga merupakan salah satu dusun yang berbatasan langsung dengan jawa tengah. Dusun ini memiliki sumber daya alam yang melimpah, dengan aliran sungai krasak, aliran sungai pandan arum, bendungan suro, perkebunan salak, cabai, padi, dan terasering sawah.
           </p>
           <ul>
-            <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-            <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-            <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+            <li><i class="bi bi-check-circle"></i> wisata alam.</li>
+            <li><i class="bi bi-check-circle"></i> wisata budaya.</li>
+            <li><i class="bi bi-check-circle"></i> wisata edukasi.</li>
           </ul>
           <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          Lokasinya di kawasan lereng gunung Merapi yang berada 700 mdpl dan hanya berjarak 8,5 km dari puncak gunung.
           </p>
 
         </div>
@@ -41,7 +40,7 @@
   <div class="breadcrumbs" data-aos="fade-in">
     <div class="container">
       <h2>Contact Us</h2>
-      <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+      <p>saran dan masukan untuk desa wisata Bumi Arum. </p>
     </div>
   </div><!-- End Breadcrumbs -->
 

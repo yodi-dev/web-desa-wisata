@@ -16,7 +16,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="box">
               <h3>Wisata Alam</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
+              <h4><sup>rp</sup>60.000<span> / orang</span></h4>
               <ul>
                 <li>Jelajah Alam</li>
                 <li>Selusur Sungai</li>
@@ -32,9 +32,10 @@
             <div class="box">
               <!-- <div class="box featured"> -->
               <h3>Wisata Edukasi</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
+              <h4><sup>rp</sup>120.000<span> / orang</span></h4>
               <ul>
                 <li>Pertanian Budi Daya Cabai</li>
+                <li>Perkebunan Budi Daya salak</li>
                 <li>Peternakan Kambing dan Sapi</li>
                 <li>Pengolahan Susu Kambing</li>
               </ul>
@@ -47,7 +48,7 @@
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="box">
               <h3>Wisata Budaya</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
+              <h4><sup>rp</sup>100.000<span> / orang</span></h4>
               <ul>
                 <li>Kesenian Jathilan</li>
                 <li>Kesenian Ketoprak</li>
@@ -65,7 +66,7 @@
             <div class="box">
               <!-- <span class="advanced">Advanced</span> -->
               <h3>Camping</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
+              <h4><sup>rp</sup>75.000<span> / hari</span></h4>
               <ul>
               </ul>
               <div class="btn-wrap">
@@ -77,7 +78,7 @@
             <div class="box">
               <!-- <span class="advanced">Advanced</span> -->
               <h3>Home Stay</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
+              <h4><sup>rp</sup>100.000<span> / hari</span></h4>
               <ul>
               </ul>
               <div class="btn-wrap">
