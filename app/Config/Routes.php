@@ -41,12 +41,15 @@ $routes->group('paket', static function ($routes) {
     $routes->get('', 'Paket::index');
     $routes->get('tambah', 'Paket::add');
     $routes->post('simpan', 'Paket::save');
+    $routes->post('simpan_detail', 'Paket::simpan_detail');
     $routes->post('aksi_edit', 'Paket::aksi_edit');
     $routes->get('hapus/(:segment)', 'Paket::delete/$1');
 });
-
 $routes->add('/paket_edit/(:segment)', 'Paket::edit/$1');
 $routes->add('/paket_detail/(:segment)', 'Paket::detail/$1');
+$routes->add('paket_detail/tambah/(:segment)', 'Paket::tambah_detail/$1');
+$routes->get('paket_detail/hapus_detail/(:segment)', 'Paket::delete_detail/$1');
+
 
 $routes->get('/admin/potensi', 'Admin::potensi');
 

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\ModelPaket;
+use App\Models\ModelDestinasi;
 
 class Home extends BaseController
 {
@@ -14,7 +15,14 @@ class Home extends BaseController
 
     public function index(): string
     {
+        $model = new ModelDestinasi();
+        $populer = $model->populer();
+
+        // print_r($populer);
+        // die;
+
         $data = [
+            'populer' => $populer,
             'judul' => 'Home',
             'page' => 'home'
         ];

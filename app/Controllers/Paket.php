@@ -95,6 +95,7 @@ class Paket extends BaseController
         $destinasi = $model->data_destinasi($id);
         $all_destinasi = $model->all_destinasi();
 
+
         // var_dump($paket);
         // var_dump($destinasi);
         // var_dump($all_destinasi);
@@ -102,11 +103,47 @@ class Paket extends BaseController
             'paket' => $paket,
             'destinasi' => $destinasi,
             'all_destinasi' => $all_destinasi,
-            'title' => 'Paket - Tambah',
+            'title' => 'Paket - Detail',
             'sidebar' => 'paket',
             'page' => 'admin/paket/detail'
         ];
         return view('admin/layout_admin', $data);
+    }
+
+    public function tambah_detail($id): string
+    {
+        $model = new ModelPaket();
+        $all_destinasi = $model->all_destinasi();
+
+
+        $data = [
+            'id_paket' => $id,
+            'all_destinasi' => $all_destinasi,
+            'title' => 'Paket - Tambah Destinasi',
+            'sidebar' => 'paket',
+            // 'page' => 'admin/paket/tambah_detail'
+        ];
+        return view('admin/paket/tambah_detail', $data);
+    }
+
+    public function simpan_detail()
+    {
+        helper('form');
+        $id = $this->request->getPost('id_paket');
+
+        $data = array(
+            'id_paket'  => $id,
+            'id_destinasi' => $this->request->getPost('destinasi'),
+        );
+        $this->db->table('detail_paket')->insert($data);
+
+        return redirect()->to('paket_detail/' . $id)->with('berhasil', 'Data Berhasil di Simpan');
+    }
+
+    public function delete_detail($id)
+    {
+        $this->db->table('detail_paket')->delete(array('id' => $id));
+        return redirect()->to('paket')->with('berhasil', 'Data Berhasil di Hapus');
     }
 
     public function delete($id)

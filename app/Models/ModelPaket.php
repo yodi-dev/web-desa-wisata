@@ -56,6 +56,7 @@ class ModelPaket extends Model
         return $query;
     }
 
+
     public function edit_paket($id, $data)
     {
         $query = $this->db->table($this->table)->where('id', $id)->update($data);
@@ -65,7 +66,7 @@ class ModelPaket extends Model
     public function data_destinasi($id)
     {
         $builder = $this->db->table('detail_paket');
-        $builder->select('destinasi.nama_wisata');
+        $builder->select('detail_paket.id, destinasi.nama_wisata');
         $builder->join('destinasi', 'destinasi.id = detail_paket.id_destinasi');
         $builder->join('paket', 'paket.id = detail_paket.id_paket');
         $builder->where('id_paket', $id);

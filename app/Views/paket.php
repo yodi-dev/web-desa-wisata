@@ -15,16 +15,15 @@
             <div class="col-lg-4 col-md-6 mb-3">
               <div class="box">
                 <h3><?= $value->nama_paket ?></h3>
-                <h4><sup>Rp.</sup><?= $value->harga ?><span> / orang</span></h4>
+                <h4><sup>Rp.</sup><?= $value->harga ?> k<span> / orang</span></h4>
                 <ul>
                   <?php foreach ($value->destinasi as $key) { ?>
                     <li><?= $key->nama_wisata ?></li>
                   <?php } ?>
                 </ul>
                 <p><?= $value->keterangan ?></p>
-                <div class="btn-wrap">
-                  <a href="<?php base_url() ?>pesan/<?= $value->id ?>" class="btn-buy">Pesan</a>
-                </div>
+                <hr>
+                <a href="<?php base_url() ?>pesan/<?= $value->id ?>" class="btn-buy">Pesan</a>
               </div>
             </div>
           <?php } ?>

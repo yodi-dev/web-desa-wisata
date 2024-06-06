@@ -14,7 +14,7 @@
 
       <div class="row" data-aos="zoom-in" data-aos-delay="100">
         <?php foreach ($galeri as $value) { ?>
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
             <div class="course-item">
               <?php
               if (!empty($value->gambar)) {

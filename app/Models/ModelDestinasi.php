@@ -50,6 +50,15 @@ class ModelDestinasi extends Model
         return $query;
     }
 
+    public function populer()
+    {
+        $builder = $this->db->table($this->table);
+        $builder->select('*');
+        $builder->where('populer', 'Ya');
+        $query = $builder->get()->getResult();
+        return $query;
+    }
+
     public function edit_data($id, $data)
     {
         $query = $this->db->table($this->table)->where('id', $id)->update($data);

@@ -15,7 +15,7 @@
 
             <div class="row">
                 <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-                    <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                    <img src="assets/img/main.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
                     <h3>Desa Wisata Bumi Arum berada di Daerah Istimewa Yogyakarta</h3>
@@ -46,60 +46,26 @@
                 <h2>Destinasi</h2>
                 <p>Populer</p>
             </div>
-
             <div class="row" data-aos="zoom-in" data-aos-delay="100">
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="course-item">
-                        <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
-                        <div class="course-content">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h3><a href="course-details.html">Jelajah Alam</a></h3>
-                            </div>
-                            <p>jelajah alam</p>
-                            <div class="trainer d-flex justify-content-end align-items-center">
-                                <div class="trainer-rank d-flex align-items-center">
-                                    <a href="#">Selengkapnya</a>
+                <?php foreach ($populer as $value) { ?>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5">
+                        <div class="course-item">
+                            <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
+                            <div class="course-content">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h3><a href="course-details.html"><?= $value->nama_wisata ?></a></h3>
+                                </div>
+                                <p><?= $value->slug ?></p>
+                                <div class="trainer d-flex justify-content-end align-items-center">
+                                    <div class="trainer-rank d-flex align-items-center">
+                                        <a href="<?= base_url('detail_destinasi') ?>/<?= $value->id ?>">Selengkapnya</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div> <!-- End Course Item-->
+                    </div> <!-- End Course Item-->
+                <?php } ?>
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="course-item">
-                        <img src="assets/img/course-2.jpg" class="img-fluid" alt="...">
-                        <div class="course-content">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h3><a href="course-details.html">Pengolahan Susu Kambing</a></h3>
-                            </div>
-                            <p>pengolahan</p>
-                            <div class="trainer d-flex justify-content-end align-items-center">
-                                <div class="trainer-rank d-flex align-items-center">
-                                    <a href="#">Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End Course Item-->
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                    <div class="course-item">
-                        <img src="assets/img/course-3.jpg" class="img-fluid" alt="...">
-                        <div class="course-content">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h3><a href="course-details.html">Camping Ground</a></h3>
-                            </div>
-
-                            <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                            <div class="trainer d-flex justify-content-end align-items-center">
-                                <div class="trainer-rank d-flex align-items-center">
-                                    <a href="#">Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End Course Item-->
             </div>
 
         </div>
