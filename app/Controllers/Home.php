@@ -146,7 +146,9 @@ class Home extends BaseController
 
     public function potensi(): string
     {
+        $potensi = $this->db->table('potensi')->get()->getResult();
         $data = [
+            'potensi' => $potensi,
             'judul' => 'Potensi Desa',
             'page' => 'potensi'
         ];

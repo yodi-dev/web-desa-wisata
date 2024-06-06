@@ -51,7 +51,14 @@ $routes->add('paket_detail/tambah/(:segment)', 'Paket::tambah_detail/$1');
 $routes->get('paket_detail/hapus_detail/(:segment)', 'Paket::delete_detail/$1');
 
 
-$routes->get('/admin/potensi', 'Admin::potensi');
+$routes->group('potensi', static function ($routes) {
+    $routes->get('', 'Potensi::index');
+    $routes->get('tambah', 'Potensi::add');
+    $routes->post('simpan', 'Potensi::save');
+    $routes->post('aksi_edit', 'Potensi::aksi_edit');
+    $routes->get('hapus/(:segment)', 'Potensi::delete/$1');
+});
+$routes->add('potensi_edit/(:segment)', 'Potensi::edit/$1');
 
 // user routes
 $routes->get('/', 'Home::index');

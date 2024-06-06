@@ -131,7 +131,7 @@
                             </a>
                         </li>
                         <li class="nav-item <?php if ($sidebar == "potensi") echo 'active'; ?>">
-                            <a href="<?= base_url() ?>admin/potensi">
+                            <a href="<?= base_url() ?>potensi">
                                 <i class="fas fa-address-card"></i>
                                 <p>Potensi Desa</p>
                             </a>
