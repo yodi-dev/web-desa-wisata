@@ -12,7 +12,11 @@
                             <div class="form-group">
                                 <label for="status">Status</label>
                                 <input type="hidden" name="id" value="<?= $pesanan->id ?>">
-                                <input type="text" name="status" class="form-control" id="status" value="<?= $pesanan->status ?>">
+                                <select class="form-control" name="status" id="destinasi">
+                                    <option <?php if ($pesanan->status == "Belum Lunas") echo 'selected' ?> value="Belum Lunas">Belum Lunas</option>
+                                    <option value="Lunas" <?php if ($pesanan->status == "Lunas") echo 'selected' ?>>Lunas</option>
+                                    <option value="Selesai" <?php if ($pesanan->status == "Selesai") echo 'selected' ?>>Selesai</option>
+                                </select>
                             </div>
                         </div>
                         <div class="card-action">
