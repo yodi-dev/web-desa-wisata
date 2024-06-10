@@ -50,7 +50,7 @@
                 <?php foreach ($populer as $value) { ?>
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5">
                         <div class="course-item">
-                            <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
+                            <img src="assets/img/upload/<?= $value->gambar ?>" class="img-fluid" alt="...">
                             <div class="course-content">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <h3><a href="course-details.html"><?= $value->nama_wisata ?></a></h3>

@@ -8,11 +8,17 @@
                             <div class="card-title">Pesanan</div>
                         </div>
                         <div class="card-body">
+
                             <?php if (!empty(session()->getFlashdata('berhasil'))) { ?>
                                 <div class="alert alert-success">
                                     <?php echo session()->getFlashdata('berhasil'); ?>
                                 </div>
                             <?php } ?>
+
+                            <div class="card-sub">
+                                <a href="<?= base_url('pesanan/print') ?>" target="_blank" class="btn btn-sm btn-dark"><i class="fas fa-print"></i></a>
+                            </div>
+
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>

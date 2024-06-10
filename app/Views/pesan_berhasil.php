@@ -7,7 +7,10 @@
     <section id="pricing" class="pricing">
       <div class="container" data-aos="fade-up">
         <div class="row">
-          <p>Pesanan telah dibuat, terimakasih</p>
+          <p>
+            Pesanan telah dibuat, terimakasih <br>
+            Pembayaran dilakukan pada saat kunjungan!
+          </p>
         </div>
       </div>
     </section><!-- End Pricing Section -->

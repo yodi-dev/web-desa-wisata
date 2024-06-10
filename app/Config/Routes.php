@@ -13,6 +13,7 @@ $routes->get('/admin', 'Admin::index');
 
 $routes->group('pesanan', static function ($routes) {
     $routes->get('', 'Pesanan::index');
+    $routes->get('print', 'Pesanan::print');
     $routes->get('hapus/(:segment)', 'Pesanan::delete/$1');
     $routes->post('aksi_edit', 'Pesanan::aksi_edit');
 });

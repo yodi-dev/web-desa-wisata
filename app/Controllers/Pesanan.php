@@ -26,6 +26,7 @@ class Pesanan extends BaseController
         return view('admin/layout_admin', $data);
     }
 
+
     public function edit($id)
     {
         $model = new ModelPesanan();
@@ -55,6 +56,25 @@ class Pesanan extends BaseController
 
         $model->edit_data($id, $data);
         return redirect()->to('pesanan')->with('berhasil', 'Data Berhasil di Ubah');
+    }
+
+    public function print()
+    {
+        $builder = $this->db->table('pesanan');
+        $builder->select('pesanan.*, paket.nama_paket');
+        $builder->join('paket', 'paket.id = pesanan.id_paket');
+        $pesanan = $builder->get()->getResult();
+
+
+        // print_r($pesanan);
+        // die;
+
+        $data = [
+            'pesanan' => $pesanan,
+            'title' => 'Admin - Print Laporan',
+            'sidebar' => 'pesanan',
+        ];
+        return view('admin/pesanan/print', $data);
     }
 
     public function delete($id)
