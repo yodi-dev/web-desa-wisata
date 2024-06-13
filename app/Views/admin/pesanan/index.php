@@ -19,7 +19,7 @@
                                 <a href="<?= base_url('pesanan/print') ?>" target="_blank" class="btn btn-sm btn-dark"><i class="fas fa-print"></i></a>
                             </div>
 
-                            <table class="table table-bordered">
+                            <table class="table table-bordered" id="pesanan">
                                 <thead>
                                     <tr>
                                         <th scope="col">Tanggal</th>
@@ -29,7 +29,7 @@
                                         <th scope="col">Nomor HP</th>
                                         <th scope="col">Jumlah Orang</th>
                                         <th scope="col">Status</th>
-                                        <th scope="col" style="width: 12rem;">Aksi</th>
+                                        <th scope="col" style="width: 10rem;">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>

@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title> <?= $title ?></title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-    <link rel="icon" href="../assets/img/logo.png" type="image/x-icon" />
+    <link rel="icon" href="../../assets/img/logo.png" type="image/x-icon" />
 
     <!-- Fonts and icons -->
-    <script src="../assets/js/plugin/webfont/webfont.min.js"></script>
+    <script src="../../assets/js/plugin/webfont/webfont.min.js"></script>
     <script>
         WebFont.load({
             google: {
@@ -16,7 +16,7 @@
             },
             custom: {
                 "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"],
-                urls: ['../assets/css/fonts.css']
+                urls: ['../../assets/css/fonts.css']
             },
             active: function() {
                 sessionStorage.fonts = true;
@@ -25,11 +25,11 @@
     </script>
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/azzara.min.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/azzara.min.css">
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <!-- <link rel="stylesheet" href="../assets/css/demo.css"> -->
+    <!-- <link rel="stylesheet" href="../../assets/css/demo.css"> -->
 </head>
 
 <body>
@@ -43,7 +43,7 @@
 
                 <a href="#" class="logo">
                     <h1 class="title mt-2 text-dark">Bumi Arum</h1>
-                    <!-- <img src="../assets/img/logo.png" alt="navbar brand" class="navbar-brand" style="width: 3em;"> -->
+                    <!-- <img src="../../assets/img/logo.png" alt="navbar brand" class="navbar-brand" style="width: 3em;"> -->
                 </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
@@ -67,13 +67,13 @@
                         <li class="nav-item dropdown hidden-caret">
                             <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
                                 <div class="avatar-sm">
-                                    <img src="../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+                                    <img src="../../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
                                 </div>
                             </a>
                             <ul class="dropdown-menu dropdown-user animated fadeIn">
                                 <li>
                                     <div class="user-box">
-                                        <div class="avatar-lg"><img src="../assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
+                                        <div class="avatar-lg"><img src="../../assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
                                         <div class="u-text">
                                             <h4> <?= session('username') ?> </h4>
                                         </div>
@@ -163,55 +163,55 @@
 
 
     <!--   Core JS Files   -->
-    <!-- <script src="../assets/js/core/jquery.3.2.1.min.js"></script> -->
+    <!-- <script src="../../assets/js/core/jquery.3.2.1.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="../assets/js/core/popper.min.js"></script>
-    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../../assets/js/core/popper.min.js"></script>
+    <script src="../../assets/js/core/bootstrap.min.js"></script>
 
     <!-- <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script> -->
 
 
     <!-- jQuery UI -->
-    <script src="../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-    <script src="../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+    <script src="../../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="../../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 
     <!-- jQuery Scrollbar -->
-    <script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
     <!-- Moment JS -->
-    <script src="../assets/js/plugin/moment/moment.min.js"></script>
+    <script src="../../assets/js/plugin/moment/moment.min.js"></script>
 
     <!-- Chart JS -->
-    <script src="../assets/js/plugin/chart.js/chart.min.js"></script>
+    <script src="../../assets/js/plugin/chart.js/chart.min.js"></script>
 
     <!-- jQuery Sparkline -->
-    <script src="../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+    <script src="../../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
 
     <!-- Chart Circle -->
-    <script src="../assets/js/plugin/chart-circle/circles.min.js"></script>
+    <script src="../../assets/js/plugin/chart-circle/circles.min.js"></script>
 
     <!-- Datatables -->
-    <!-- <script src="../assets/js/plugin/datatables/datatables.min.js"></script> -->
+    <!-- <script src="../../assets/js/plugin/datatables/datatables.min.js"></script> -->
     <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 
     <!-- Bootstrap Notify -->
-    <script src="../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <script src="../../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
     <!-- Bootstrap Toggle -->
-    <script src="../assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+    <script src="../../assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
 
     <!-- jQuery Vector Maps -->
-    <script src="../assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
-    <script src="../assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+    <script src="../../assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+    <script src="../../assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
 
     <!-- Google Maps Plugin -->
-    <script src="../assets/js/plugin/gmaps/gmaps.js"></script>
+    <script src="../../assets/js/plugin/gmaps/gmaps.js"></script>
 
     <!-- Sweet Alert -->
-    <script src="../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+    <script src="../../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
 
     <!-- Azzara JS -->
-    <script src="../assets/js/ready.min.js"></script>
+    <script src="../../assets/js/ready.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {

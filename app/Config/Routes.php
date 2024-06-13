@@ -61,6 +61,14 @@ $routes->group('potensi', static function ($routes) {
 });
 $routes->add('potensi_edit/(:segment)', 'Potensi::edit/$1');
 
+$routes->group('feedback', static function ($routes) {
+    $routes->get('', 'Feedback::index');
+    $routes->get('show/(:segment)', 'Feedback::show/$1');
+    $routes->get('hapus/(:segment)', 'Feedback::delete/$1');
+    $routes->post('aksi_edit', 'Feedback::aksi_edit');
+});
+$routes->add('/feedback_edit/(:segment)', 'Feedback::edit/$1');
+
 // user routes
 $routes->get('/', 'Home::index');
 $routes->get('/home/galeri', 'Home::galeri');
@@ -69,6 +77,7 @@ $routes->get('/detail_destinasi/(:segment)', 'Home::detail_destinasi/$1');
 $routes->get('/home/paket', 'Home::paket');
 $routes->get('/home/potensi', 'Home::potensi');
 $routes->get('/home/profil', 'Home::profil');
+$routes->post('/home/send', 'Home::send', ['as' => 'send']);
 $routes->add('/home/pesan/(:segment)', 'Home::pesan/$1');
 $routes->add('home/pesanan', 'Home::pesanan');
 $routes->add('home/pesan_berhasil', 'Home::pesan_berhasil');

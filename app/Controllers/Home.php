@@ -11,6 +11,7 @@ class Home extends BaseController
     public function __construct()
     {
         $this->db = db_connect();
+        helper(['url', 'form']);
     }
 
     public function index(): string
@@ -157,10 +158,40 @@ class Home extends BaseController
 
     public function profil(): string
     {
+        helper('form');
+
         $data = [
             'judul' => 'Profil Desa',
             'page' => 'profil'
         ];
         return view('layout', $data);
+    }
+
+    public function send()
+    {
+        $validation = $this->validate([
+            'name' => 'required',
+            'message' => 'required'
+        ]);
+
+        if (!$validation) {
+            return view('layout', ['validation' => $this->validator]);
+        } else {
+            helper('form');
+
+            $data = array(
+                'nama' => $this->request->getPost('name'),
+                'pesan' => $this->request->getPost('message'),
+            );
+
+            // var_dump($data);
+            $send = $this->db->table('feedback')->insert($data);
+
+            if ($send) {
+                return redirect()->to('home/profil')->with('success', 'Pesan telah terkirim');
+            } else {
+                return redirect()->to('home/profil')->with('error', 'failed')->withInput();
+            }
+        }
     }
 }
