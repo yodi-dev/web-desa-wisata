@@ -14,9 +14,11 @@ $routes->get('/admin', 'Admin::index');
 $routes->group('pesanan', static function ($routes) {
     $routes->get('', 'Pesanan::index');
     $routes->get('print', 'Pesanan::print');
+    $routes->get('print_choose', 'Pesanan::print_choose');
     $routes->get('hapus/(:segment)', 'Pesanan::delete/$1');
     $routes->post('aksi_edit', 'Pesanan::aksi_edit');
 });
+$routes->post('choose_date', 'Pesanan::choose_date');
 $routes->add('/pesanan_edit/(:segment)', 'Pesanan::edit/$1');
 
 

@@ -7,17 +7,45 @@
                         <div class="card-header">
                             <div class="card-title">Pesanan</div>
                         </div>
+                        <div class="card-sub">
+                            <div class="row d-flex align-items-center justify-content-center">
+                                <div class="col-lg-9">
+                                    <?php
+                                    // echo form_open('choose_date') 
+                                    ?>
+                                    <form action="<?= base_url('choose_date') ?>" method="post" target="_blank">
+                                        <?= csrf_field(); ?>
+                                        <div class="container align-items-center">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="inputMulaiTanggal" class="font-weight-bold">Tanggal :</label>
+                                                        <input type="date" id="inputMulaiTanggal" name="mulai_tanggal" class="form-control" name="mulai_tanggal" required>
+                                                        <input type="date" id="inputSampaiTanggal" name="sampai_tanggal" class="form-control" name="sampai_tanggal" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 d-flex align-items-center">
+                                                    <div class="form-group">
+                                                        <button type="submit" class="btn btn-sm btn-dark"><i class="fas fa-search"></i> Find</button>
+                                                        <button type="submit" name="print" class="btn btn-sm btn-dark mx-2"><i class="fas fa-print"></i> Print</button>
+                                                        <a href="<?= base_url('pesanan/print') ?>" target="_blank" class="btn btn-sm btn-dark"><i class="fas fa-print"></i> Semua</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <?php
+                                    // echo form_close() 
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
                         <div class="card-body">
-
                             <?php if (!empty(session()->getFlashdata('berhasil'))) { ?>
                                 <div class="alert alert-success">
                                     <?php echo session()->getFlashdata('berhasil'); ?>
                                 </div>
                             <?php } ?>
-
-                            <div class="card-sub">
-                                <a href="<?= base_url('pesanan/print') ?>" target="_blank" class="btn btn-sm btn-dark"><i class="fas fa-print"></i></a>
-                            </div>
 
                             <table class="table table-bordered" id="pesanan">
                                 <thead>
@@ -50,6 +78,9 @@
                                     <?php } ?>
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="card-footer">
+
                         </div>
                     </div>
                 </div>

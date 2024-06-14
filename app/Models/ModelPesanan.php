@@ -55,4 +55,18 @@ class ModelPesanan extends Model
         $query = $this->db->table($this->table)->where('id', $id)->update($data);
         return $query;
     }
+
+    public function choose_date()
+    {
+        $from  = @$_POST['mulai_tanggal'];
+        $to = @$_POST['sampai_tanggal'];
+
+        return $this->db->table('pesanan')
+            ->select('pesanan.*, paket.nama_paket')
+            ->join('paket', 'paket.id = pesanan.id_paket')
+            ->where("tanggal BETWEEN '{$from}' AND '{$to}'")
+            ->orderBy('id', 'ASC')
+            ->get()
+            ->getResult();
+    }
 }

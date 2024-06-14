@@ -26,6 +26,42 @@ class Pesanan extends BaseController
         return view('admin/layout_admin', $data);
     }
 
+    public function choose_date()
+    {
+        $from  = @$_POST['mulai_tanggal'];
+        $to = @$_POST['sampai_tanggal'];
+
+        $pesanan = $this->db->table('pesanan')
+            ->where("tanggal BETWEEN '{$from}' AND '{$to}'")
+            ->orderBy('id', 'ASC')
+            ->get()
+            ->getResult();
+
+        $data = [
+            'pesanan' => $pesanan,
+            'title' => 'Admin - Pesanan',
+            'sidebar' => 'pesanan',
+            'page' => 'admin/pesanan/index'
+        ];
+
+        $print = @$_POST['print'];
+
+        if (isset($print)) {
+            $model = new ModelPesanan();
+            $pesanan = $model->choose_date();
+
+            $data = [
+                'pesanan' => $pesanan,
+                'title' => 'Admin - Print Laporan',
+                'sidebar' => 'pesanan',
+            ];
+            return view('admin/pesanan/print', $data);
+            // print_r($pesanan);
+            // die;
+        }
+        return view('admin/layout_admin', $data);
+    }
+
 
     public function edit($id)
     {
@@ -65,10 +101,6 @@ class Pesanan extends BaseController
         $builder->join('paket', 'paket.id = pesanan.id_paket');
         $pesanan = $builder->get()->getResult();
 
-
-        // print_r($pesanan);
-        // die;
-
         $data = [
             'pesanan' => $pesanan,
             'title' => 'Admin - Print Laporan',
@@ -76,6 +108,7 @@ class Pesanan extends BaseController
         ];
         return view('admin/pesanan/print', $data);
     }
+
 
     public function delete($id)
     {
